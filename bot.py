@@ -6,7 +6,7 @@ from pyrogram.errors import ApiIdInvalid, ApiIdPublishedFlood, AccessTokenInvali
 
 logging.basicConfig(
     level=logging.WARNING, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-) # type: ignore
+)  # type: ignore
 
 app = Client(
     ":memory:",
