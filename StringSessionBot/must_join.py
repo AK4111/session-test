@@ -21,9 +21,9 @@ async def must_join_channel(bot: Client, msg: Message):
                 await msg.reply(
                     f"You must join [this channel]({link}) to use me. After joining try again !",
                     disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("✨ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ✨", url=link)]
-                    ])
+                    reply_markup=InlineKeyboardMarkup(
+                        [[InlineKeyboardButton("✨ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ✨", url=link)]]
+                    ),
                 )
                 await msg.stop_propagation()
             except ChatWriteForbidden:
